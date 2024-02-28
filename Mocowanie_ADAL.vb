@@ -390,10 +390,10 @@ Case "(ŚP-PN-PSN)"
 	Constraints.AddMate(no_SrP, nameScrew, "X Axis",
 	                      nameP1, "X Axis")
 
-	Constraints.AddMate(np_PN, nameN1, "YZ Plane",
-	                      nameP3, "YZ PLANE")
-	Constraints.AddFlush(no_PN1, nameN1, "X Axis",
-	                      nameP3, "X Axis", -s)
+	Constraints.AddFlush(np_PN, nameN1, "YZ Plane",
+	                      nameP3, "YZ PLANE", -s)
+	Constraints.AddMate(no_PN1, nameN1, "X Axis",
+	                      nameP3, "X Axis")
 	Constraints.AddMate(np_PP1, nameP1, "YZ Plane",
 	                      nameP3, "YZ PLANE", (lPP1))                      
 	Constraints.AddMate(no_PP1, nameP1, "X Axis",
