@@ -102,21 +102,26 @@ End If
 '----------------------------------AUTOMATED PART---------------------------------------------------------------------------------------------------------------------------
 'Wybór klasy dokładności:
 Dim Klasa As String
+Dim Klasa1 As String
 Select Case Mtrl
 Case "A2"
 	Klasa = "80"
+	Klasa1 = "70"
 Case "A4"
 	Klasa = "80"
+	Klasa1 = "70"
 Case "pok. Zn"
 	Klasa = "8.8"
+	Klasa1 = "8"
 Case "pok. Ox"
 	Klasa = "8.8"
+	Klasa1 = "8"
 End Select
 'Tworzenie stringów aby wstawić elementy z CC:
 Dim finalScrew As String = ScrewType & " - "  & Mx & " x " & Lenght & " - " & Klasa & " - " & Mtrl
 Dim finalS As String = xx & " - " & Mtrl
 Dim finalP As String = xx & " - " & Mtrl &  " - 200HV"
-Dim finalN As String = Mx & " - A/B - " & Mtrl & " - 8"
+Dim finalN As String = Mx & " - A/B - " & Mtrl & " - " & Klasa1
 Dim nameScrew As String = "Śruba" & Parameter("Index").Value.ToString() & ":1"
 Dim nameN As String = "Nakrętka" & Parameter("Index").Value.ToString() & ":1"
 Dim nameN1 As String = "Nakrętka" & Parameter("Index").Value.ToString() & ":2"
